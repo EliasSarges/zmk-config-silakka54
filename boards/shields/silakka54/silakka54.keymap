@@ -5,72 +5,58 @@
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/bt.h> // Adicionado para comandos Bluetooth
+#include <dt-bindings/zmk/bt.h>
 
-/ { // O nó raiz que envolve tudo
-
+/ {
     // =================================================
     //      1. DEFINIÇÃO DO LAYOUT FÍSICO (O MAPA)
     // =================================================
-    // Damos um nome (label) ao layout para poder referenciá-lo depois.
-    // O nome "silakka_layout" é um bom exemplo.
-    silakka_layout: layout {
+    // A sintaxe correta não usa a propriedade "layout = []".
+    // Os nomes são definidos diretamente.
+    keymap_layout {
         compatible = "zmk,keymap-layout";
-        layout = [
-        // Esquerda                                     Direita
-        L_T_0 L_T_1 L_T_2 L_T_3 L_T_4 L_T_5     R_T_0 R_T_1 R_T_2 R_T_3 R_T_4 R_T_5
-        L_M_0 L_M_1 L_M_2 L_M_3 L_M_4 L_M_5     R_M_0 R_M_1 R_M_2 R_M_3 R_M_4 R_M_5
-        L_H_0 L_H_1 L_H_2 L_H_3 L_H_4 L_H_5     R_H_0 R_H_1 R_H_2 R_H_3 R_H_4 R_H_5
-        L_B_0 L_B_1 L_B_2 L_B_3 L_B_4 L_B_5     R_B_0 R_B_1 R_B_2 R_B_3 R_B_4 R_B_5
-        L_TH_0 L_TH_1 L_TH_2 L_TH_3 L_TH_4 L_TH_5 R_TH_0 R_TH_1 R_TH_2 R_TH_3 R_TH_4 R_TH_5
-        ];
+        // Esquerda
+        key-positions = <0 1 2 3 4 5 12 13 14 15 16 17 24 25 26 27 28 29 36 37 38 39 40 41 48 49 50 51 52 53>;
+        // Direita
+        key-positions = <6 7 8 9 10 11 18 19 20 21 22 23 30 31 32 33 34 35 42 43 44 45 46 47 54 55 56 57 58 59>;
     };
 
     // =================================================
     //      2. MAPEAMENTO DAS TECLAS (AS CORES)
     // =================================================
-    // Este é o nó 'keymap' que estava faltando.
     keymap {
         compatible = "zmk,keymap";
 
-        // --- CAMADA 0: Padrão (QWERTY) ---
         default_layer {
-            // Aponta para o layout que definimos acima.
-            layout = <&silakka_layout>;
-            // A lista de bindings (mapeamentos) que corresponde à ordem do layout.
+            // A propriedade 'layout' não é mais necessária aqui,
+            // pois o keymap usará a ordem padrão do matrix_transform.
             bindings = <
             // Esquerda                                                               Direita
-            &kp Q      &kp W      &kp E      &kp R      &kp T                          &kp Y      &kp U      &kp I      &kp O      &kp P      &kp MINUS
-            &kp A      &kp S      &kp D      &kp F      &kp G                          &kp H      &kp J      &kp K      &kp L      &kp SEMI   &kp SQT
-            &kp Z      &kp X      &kp C      &kp V      &kp B                          &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH   &kp RSHFT
-            &kp LCTRL  &kp LGUI   &kp LALT   &kp LSHFT  &none                          &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp BSPC
-            &kp ESC    &kp TAB    &mo 1      &kp SPACE  &kp RET                        &mo 2      &none      &none      &none      &none      &none
+            &kp Q      &kp W      &kp E      &kp R      &kp T      &none              &none      &kp Y      &kp U      &kp I      &kp O      &kp P
+            &kp A      &kp S      &kp D      &kp F      &kp G      &none              &none      &kp H      &kp J      &kp K      &kp L      &kp SEMI
+            &kp Z      &kp X      &kp C      &kp V      &kp B      &none              &none      &kp N      &kp M      &kp COMMA  &kp DOT    &kp FSLH
+            &kp LCTRL  &kp LGUI   &kp LALT   &kp LSHFT  &none      &none              &none      &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
+            &kp ESC    &kp TAB    &mo 1      &kp SPACE  &kp RET    &none              &none      &mo 2      &kp BSPC   &none      &none      &none
             >;
         };
 
-        // --- CAMADA 1: Símbolos (Acessada com a tecla esquerda do polegar) ---
         layer_1 {
-            layout = <&silakka_layout>;
             bindings = <
-            // Esquerda                                                               Direita
-            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5                         &kp N6     &kp N7     &kp N8     &kp N9     &kp N0     &kp EQUAL
-            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT                      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR   &kp BSLH
-            &trans     &trans     &trans     &trans     &trans                         &trans     &trans     &trans     &trans     &trans     &trans
-            &trans     &trans     &trans     &trans     &none                          &none      &kp HOME   &kp PGDN   &kp PGUP   &kp END    &trans
-            &trans     &trans     &trans     &trans     &trans                         &trans     &none      &none      &none      &none      &none
+            &kp N1     &kp N2     &kp N3     &kp N4     &kp N5     &none              &none      &kp N6     &kp N7     &kp N8     &kp N9     &kp N0
+            &kp EXCL   &kp AT     &kp HASH   &kp DLLR   &kp PRCNT  &none              &none      &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR   &kp RPAR
+            &trans     &trans     &trans     &trans     &trans     &none              &none      &trans     &trans     &trans     &trans     &trans
+            &trans     &trans     &trans     &trans     &none      &none              &none      &kp HOME   &kp PGDN   &kp PGUP   &kp END
+            &trans     &trans     &trans     &trans     &trans     &none              &none      &trans     &trans     &none      &none      &none
             >;
         };
 
-        // --- CAMADA 2: Funções e Bluetooth (Acessada com a tecla direita do polegar) ---
         layer_2 {
-            layout = <&silakka_layout>;
             bindings = <
-            // Esquerda                                                               Direita
-            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4           &kp F1     &kp F2     &kp F3     &kp F4     &kp F5     &kp F6
-            &bt BT_CLR   &trans       &trans       &trans       &trans                 &kp F7     &kp F8     &kp F9     &kp F10    &kp F11    &kp F12
-            &trans       &trans       &trans       &trans       &trans                 &trans     &trans     &trans     &trans     &trans     &trans
-            &trans       &trans       &trans       &trans       &none                  &none      &trans     &trans     &trans     &trans     &trans
-            &trans       &trans       &trans       &trans       &trans                 &trans     &none      &none      &none      &none      &none
+            &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &none    &none      &kp F1     &kp F2     &kp F3     &kp F4     &kp F5
+            &bt BT_CLR   &trans       &trans       &trans       &trans     &none    &none      &kp F7     &kp F8     &kp F9     &kp F10    &kp F11
+            &trans       &trans       &trans       &trans       &trans     &none    &none      &trans     &trans     &trans     &trans     &trans
+            &trans       &trans       &trans       &trans       &none      &none    &none      &trans     &trans     &trans     &trans
+            &trans       &trans       &trans       &trans       &trans     &none    &none      &trans     &trans     &none      &none      &none
             >;
         };
     };
