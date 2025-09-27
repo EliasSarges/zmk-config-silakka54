@@ -1,0 +1,8 @@
+# Copyright (c) 2025 Seu Nome
+# SPDX-License-Identifier: MIT
+
+config SHIELD_SILAKKA54_LEFT
+    def_bool $(shields_list_contains,silakka54_left)
+
+config SHIELD_SILAKKA54_RIGHT
+    def_bool $(shields_list_contains,silakka54_right)

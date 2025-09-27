@@ -1,0 +1,14 @@
+/*
+ * Copyright (c) 2025 Seu Nome
+ * SPDX-License-Identifier: MIT
+ */
+
+// Inclui todas as definições comuns do silakka54.dtsi
+#include "silakka54.dtsi"
+
+// Sobrescreve/adiciona configurações específicas para o lado esquerdo
+&split {
+    // Define que este lado é o "central" (master)
+    // Esta é a configuração padrão, mas é bom ser explícito.
+    split-role = "central";
+};

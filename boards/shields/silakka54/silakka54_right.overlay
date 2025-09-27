@@ -1,0 +1,13 @@
+/*
+ * Copyright (c) 2025 Seu Nome
+ * SPDX-License-Identifier: MIT
+ */
+
+// Inclui todas as definições comuns do silakka54.dtsi
+#include "silakka54.dtsi"
+
+// Sobrescreve/adiciona configurações específicas para o lado direito
+&split {
+    // Define que este lado é o "periférico" (slave)
+    split-role = "peripheral";
+};
