@@ -44,7 +44,7 @@
         label = "SPLIT";
     };
 
-    reset: reset {
+    zmk_reset: reset {
         compatible = "zmk,gpio-reset";
         label = "RESET";
         gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
