@@ -1,0 +1,11 @@
+layout {
+    compatible = "zmk,keymap-layout";
+    layout = [
+        // Esquerda                                     Direita
+        L_T_0 L_T_1 L_T_2 L_T_3 L_T_4 L_T_5     R_T_0 R_T_1 R_T_2 R_T_3 R_T_4 R_T_5
+        L_M_0 L_M_1 L_M_2 L_M_3 L_M_4 L_M_5     R_M_0 R_M_1 R_M_2 R_M_3 R_M_4 R_M_5
+        L_H_0 L_H_1 L_H_2 L_H_3 L_H_4 L_H_5     R_H_0 R_H_1 R_H_2 R_H_3 R_H_4 R_H_5
+        L_B_0 L_B_1 L_B_2 L_B_3 L_B_4 L_B_5     R_B_0 R_B_1 R_B_2 R_B_3 R_B_4 R_B_5
+        L_TH_0 L_TH_1 L_TH_2 L_TH_3 L_TH_4 L_TH_5 R_TH_0 R_TH_1 R_TH_2 R_TH_3 R_TH_4 R_TH_5
+    ];
+};

@@ -11,3 +11,10 @@
     // Define que este lado é o "periférico" (slave)
     split-role = "peripheral";
 };
+
+// Adicione esta seção
+&keymap_transform {
+    // Desloca as colunas do lado direito por 6,
+    // porque o lado esquerdo ocupa as primeiras 6 colunas.
+    col-offset = <6>;
+};
