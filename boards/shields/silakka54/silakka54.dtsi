@@ -1,35 +1,67 @@
-#include <dt-bindings/zmk/matrix_transform.h> 
+/*
+ * Copyright (c) 2025 Seu Nome
+ * SPDX-License-Identifier: MIT
+ *
+ * Baseado na configuração do Lily58, que foi comprovada como funcional neste hardware.
+ */
+#include <dt-bindings/zmk/matrix_transform.h>
 
 / {
     chosen {
-        zmk,kscan = &kscan0;
+        zmk,kscan = &kscan;
         zmk,split = &split;
         zmk,matrix_transform = &keymap_transform;
     };
 
-    kscan0: kscan {
+    kscan: kscan {
         compatible = "zmk,kscan-gpio-matrix";
-        label = "KSCAN_1x1_TEST";
-        
-        /* --- TESTE COM LÓGICA col2row --- */
-        /* Vamos testar a tecla no canto superior esquerdo */
+        label = "KSCAN";
 
-        // O pino da primeira coluna visual
-        col-gpios = <&gpio0 2 (GPIO_ACTIVE_HIGH)>;
+        // Configuração de pinos IDÊNTICA à do Lily58
+        col-gpios
+            = <&pro_micro 21 (GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 20 (GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 19 (GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 18 (GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 15 (GPIO_ACTIVE_HIGH)>
+            , <&pro_micro 14 (GPIO_ACTIVE_HIGH)>
+            ;
 
-        // O pino da primeira fileira visual
-        row-gpios = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        row-gpios
+            = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
+        /* NOTA: O Lily58 tem 4 linhas. O Silakka54 tem 5.
+           A 5ª linha (polegar) provavelmente usa um dos pinos não utilizados.
+           Vamos adicionar um pino comum para a 5ª linha. O pino 10 é uma boa aposta.
+           Se a linha do polegar não funcionar, só precisaremos mudar este último pino. */
+        // row-gpios += <&pro_micro 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+        // Vamos começar com 4 linhas para garantir que o resto funcione.
     };
 
     split: split {
         compatible = "zmk,split-ble";
+        transport = <&split_transport>;
         label = "SPLIT";
+    };
+    
+    split_transport: split_transport {
+        compatible = "zmk,split-ble-transport";
     };
 
     keymap_transform: keymap_transform {
         compatible = "zmk,matrix-transform";
-        columns = <1>;
-        rows = <1>;
-        map = < RC(0,0) >;
+        columns = <12>; // 6 colunas por lado
+        rows = <4>;    // Começando com 4 linhas para corresponder ao Lily58
+
+        map = <
+        // Mapeamento padrão para um teclado split de 12x4
+        RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)  RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11)
+        RC(1,0) RC(1,1) RC(1,2) RC(1,3) RC(1,4) RC(1,5)  RC(1,6) RC(1,7) RC(1,8) RC(1,9) RC(1,10) RC(1,11)
+        RC(2,0) RC(2,1) RC(2,2) RC(2,3) RC(2,4) RC(2,5)  RC(2,6) RC(2,7) RC(2,8) RC(2,9) RC(2,10) RC(2,11)
+        RC(3,0) RC(3,1) RC(3,2) RC(3,3) RC(3,4) RC(3,5)  RC(3,6) RC(3,7) RC(3,8) RC(3,9) RC(3,10) RC(3,11)
+        >;
     };
 };
