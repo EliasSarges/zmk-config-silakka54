@@ -7,12 +7,11 @@
 
         default_layer {
             bindings = <
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                      &kp NUMBER_6  &kp NUMBER_7  &kp N8     &kp N9   &kp N0    &trans
-&trans  &kp Q         &kp W         &kp E         &kp R         &kp T                       &kp Y         &kp U         &kp I      &kp O    &kp P     &kp LBKT
-&trans  &kp A         &kp S         &kp D         &kp F         &kp G                       &kp H         &kp J         &kp K      &kp L    &kp SEMI  &kp SPACE
-&trans  &kp Z         &kp X         &kp C         &kp V         &kp B     &trans    &trans  &kp N         &kp M         &kp COMMA  &kp DOT  &kp FSLH  &trans
-                                    &trans        &trans        &kp LGUI  &trans    &trans  &kp RET       &trans        &trans
-            >;
+&kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_9
+&kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_9
+&kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_9
+&kp NUMBER_0  &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4                      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_9
+&trans        &trans        &trans        &trans        &kp NUMBER_3  &kp NUMBER_4                      &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_7  &trans        &trans        &trans
         };
     };
 };
