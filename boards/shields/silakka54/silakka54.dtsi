@@ -11,7 +11,6 @@
         zmk,kscan = &kscan0;
         zmk,split = &split;
         zmk,matrix_transform = &keymap_transform;
-        zmk,physical-layout = <&physical_layout_default>;
     };
 
     //https://zmk.dev/docs/config/kscan
@@ -19,24 +18,22 @@
         compatible = "zmk,kscan-gpio-matrix";
         label = "KSCAN";
         
-        diode-direction = "row2col";
-        
-        // Pinos conectados DIRETAMENTE aos switches
-        row-gpios
-            = <&gpio0 9 (GPIO_ACTIVE_HIGH)>,
-              <&gpio0 10 (GPIO_ACTIVE_HIGH)>,
-              <&gpio1 11 (GPIO_ACTIVE_HIGH)>,
-              <&gpio1 13 (GPIO_ACTIVE_HIGH)>,
-              <&gpio1 15 (GPIO_ACTIVE_HIGH)>,
-              <&gpio0 2 (GPIO_ACTIVE_HIGH)>;
-
-        // Pinos conectados aos diodos
         col-gpios
-            = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+            = <&gpio0 2 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 15 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 13 (GPIO_ACTIVE_HIGH)>
+            , <&gpio1 11 (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 10 (GPIO_ACTIVE_HIGH)>
+            , <&gpio0 9 (GPIO_ACTIVE_HIGH)>
+            ;
+
+        row-gpios
+            = <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            ;
     };
 
     split: split {
@@ -44,11 +41,11 @@
         label = "SPLIT";
     };
 
-    zmk_reset: reset {
-        compatible = "zmk,gpio-reset";
-        label = "RESET";
-        gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-    };
+    // zmk_reset: reset {
+    //     compatible = "zmk,gpio-reset";
+    //     label = "RESET";
+    //     gpios = <&gpio0 18 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+    // };
 
     keymap_transform: keymap_transform {
         compatible = "zmk,matrix-transform";
@@ -65,12 +62,4 @@
            RC(4,0)  RC(4,1)  RC(4,2)  RC(4,3)  RC(4,4)  RC(4,5)  // Linha 4
         >;
     };
-
-    physical_layout_default: physical_layout_default {
-        compatible = "zmk,physical-layout";
-        display-name = "Silakka54 Default";
-        kscan = <&kscan0>;
-        transform = <&keymap_transform>;
-    };
 };
-
