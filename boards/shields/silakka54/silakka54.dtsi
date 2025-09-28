@@ -23,20 +23,20 @@
         
         // Pinos conectados DIRETAMENTE aos switches
         row-gpios
-            = <&gpio0 09 (GPIO_ACTIVE_HIGH)>,
+            = <&gpio0 9 (GPIO_ACTIVE_HIGH)>,
               <&gpio0 10 (GPIO_ACTIVE_HIGH)>,
               <&gpio1 11 (GPIO_ACTIVE_HIGH)>,
               <&gpio1 13 (GPIO_ACTIVE_HIGH)>,
               <&gpio1 15 (GPIO_ACTIVE_HIGH)>,
-              <&gpio0 02 (GPIO_ACTIVE_HIGH)>;
+              <&gpio0 2 (GPIO_ACTIVE_HIGH)>;
 
         // Pinos conectados aos diodos
         col-gpios
             = <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 00 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+              <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
               <&gpio0 11 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 04 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
-              <&gpio1 06 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
+              <&gpio1 4 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
+              <&gpio1 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
 
     split: split {
