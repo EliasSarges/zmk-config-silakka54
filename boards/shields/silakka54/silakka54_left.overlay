@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "silakka54.dtsi"
+#include "lily58.dtsi"
 
 &kscan0 {
     col-gpios
