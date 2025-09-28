@@ -1,22 +1,31 @@
 /*
- * Copyright (c) 2020 Pete Johanson
- *
+ * Copyright (c) 2025 Seu Nome
  * SPDX-License-Identifier: MIT
+ *
+ * Adaptado do lily58_right.overlay.
  */
 
 #include "silakka54.dtsi"
+
+&kscan0 {
+    // Pinos col-gpios do Lily58, traduzidos para nice!nano
+    // Estes são os pinos que são ativados no lado direito.
+    col-gpios
+        = <&gpio0 6 (GPIO_ACTIVE_HIGH)>   // D1 (TX)
+        , <&gpio0 8 (GPIO_ACTIVE_HIGH)>   // D0 (RX)
+        , <&gpio0 31 (GPIO_ACTIVE_HIGH)>  // D2 (SDA)
+        , <&gpio0 29 (GPIO_ACTIVE_HIGH)>  // D3 (SCL)
+        , <&gpio0 4 (GPIO_ACTIVE_HIGH)>   // D4
+        , <&gpio0 2 (GPIO_ACTIVE_HIGH)>   // D5
+        ;
+};
 
 &default_transform {
     col-offset = <6>;
 };
 
-&kscan0 {
-    col-gpios
-        = <&pro_micro 10 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
-        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
-        ;
-};
+
+// &right_encoder { // Removido, pois o encoder não é garantido ou configurado aqui
+//     status = "okay";
+// };
+
