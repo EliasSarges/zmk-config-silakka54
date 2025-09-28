@@ -1,20 +1,22 @@
 /*
- * Copyright (c) 2025 Seu Nome
+ * Copyright (c) 2020 Pete Johanson
+ *
  * SPDX-License-Identifier: MIT
  */
 
-// Inclui todas as definições comuns do silakka54.dtsi
-#include "silakka54.dtsi"
+#include "lily58.dtsi"
 
-// Sobrescreve/adiciona configurações específicas para o lado direito
-&split {
-    // Define que este lado é o "periférico" (slave)
-    split-role = "peripheral";
+&default_transform {
+    col-offset = <6>;
 };
 
-// Adicione esta seção
-&keymap_transform {
-    // Desloca as colunas do lado direito por 6,
-    // porque o lado esquerdo ocupa as primeiras 6 colunas.
-    col-offset = <6>;
+&kscan0 {
+    col-gpios
+        = <&pro_micro 10 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 16 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 18 GPIO_ACTIVE_HIGH>
+        , <&pro_micro 19 GPIO_ACTIVE_HIGH>
+        ;
 };
