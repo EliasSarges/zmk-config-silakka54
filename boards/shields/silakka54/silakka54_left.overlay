@@ -1,14 +1,6 @@
-/*
- * Copyright (c) 2025 Seu Nome
- * SPDX-License-Identifier: MIT
- *
- * Adaptado do lily58_left.overlay, mantendo as referências &pro_micro.
- */
-
 #include "silakka54.dtsi"
 
 &kscan0 {
-    // Col-gpios do Lily58 (lado esquerdo), mantendo as referências &pro_micro
     col-gpios
         = <&pro_micro 19 GPIO_ACTIVE_HIGH>
         , <&pro_micro 18 GPIO_ACTIVE_HIGH>
@@ -18,6 +10,3 @@
         , <&pro_micro 10 GPIO_ACTIVE_HIGH>
         ;
 };
-
-// Removido: &left_encoder, pois não é garantido ou configurado aqui.
-
