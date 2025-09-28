@@ -2,7 +2,8 @@
  * Copyright (c) 2025 Seu Nome
  * SPDX-License-Identifier: MIT
  *
- * Adaptado do Lily58.dtsi, com pinagem traduzida para nice!nano e matriz ajustada para Silakka54.
+ * Adaptado do lily58.dtsi, mantendo as referências &pro_micro.
+ * Ajustado para 5 linhas para o Silakka54.
  */
 
 #include <dt-bindings/zmk/matrix_transform.h>
@@ -11,13 +12,13 @@
     chosen {
         // zephyr,display = &oled; // Desativado, pois o OLED não é garantido ou configurado aqui
         zmk,kscan = &kscan0;
-        zmk,matrix_transform = &default_transform; // Usar o nome do transform definido abaixo
+        zmk,matrix_transform = &default_transform;
         // zmk,physical-layout = &kata0510_lily58_layout; // Removido, pois é específico do Lily58
     };
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns = <12>; // 6 colunas por lado
+        columns = <12>; // 6 colunas por lado, total 12 para split
         rows = <5>;     // Silakka54 tem 5 linhas
         map = <
 RC(0,0) RC(0,1) RC(0,2) RC(0,3) RC(0,4) RC(0,5)  RC(0,6) RC(0,7) RC(0,8) RC(0,9) RC(0,10) RC(0,11)
@@ -34,18 +35,18 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)  RC(4,6) RC(4,7) RC(4,8) RC(4,9)
 
         diode-direction = "col2row";
         row-gpios
-            = <&gpio0 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D6
-            , <&gpio0 22 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D7
-            , <&gpio0 24 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D8
-            , <&gpio1 0 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>  // D9
-            , <&gpio0 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)> // D10 (Aposta para a 5ª linha do Silakka54)
+            = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+            , <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
             ;
     };
 
     // left_encoder: encoder_left { // Desativado, pois o encoder não é garantido ou configurado aqui
     //     compatible = "alps,ec11";
-    //     a-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // D1 (TX)
-    //     b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>; // D0 (RX)
+    //     a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    //     b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     //     steps = <80>;
     // };
 
