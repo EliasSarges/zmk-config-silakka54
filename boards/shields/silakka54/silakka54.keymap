@@ -18,7 +18,7 @@
         };
 
         // Nova Layer 1 para utilitários (ZMK Studio, Bluetooth Reset)
-        layer_1 {
+        util_layer {
             bindings = <
 &trans  &trans        &trans        &trans        &trans        &trans                      &trans        &trans        &trans     &trans   &trans    &trans
 &trans  &trans        &trans        &trans        &trans        &trans                      &trans        &trans        &trans     &trans   &trans    &trans
