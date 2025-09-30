@@ -1,5 +1,4 @@
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -8,11 +7,21 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N0  &kp N1  &kp N2        &kp N3            &kp N4       &kp N5     &kp N6         &kp N7        &kp N8   &kp N9    &kp DELETE
-&kp TAB    &kp Q   &kp W   &kp E         &kp R             &kp T        &kp Y      &kp U          &kp I         &kp O    &kp P     &kp LBKT
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F             &kp G        &kp H      &kp J          &kp K         &kp L    &kp SEMI  &kp RBKT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V             &kp B        &kp N      &kp M          &kp COMMA     &kp DOT  &kp FSLH  &bt BT_CLR
-                           &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp ENTER  &kp BACKSPACE  &kp CAPSLOCK
+&kp ESC    &kp N0  &kp N1  &kp N2        &kp N3            &kp N4       &kp N5      &kp N6     &kp N7        &kp N8          &kp N9    &kp DELETE
+&kp TAB    &kp Q   &kp W   &kp E         &kp R             &kp T        &kp Y       &kp U      &kp I         &kp O           &kp P     &kp LBKT
+&kp LSHFT  &kp A   &kp S   &kp D         &kp F             &kp G        &kp H       &kp J      &kp K         &kp L           &kp UP    &kp RBKT
+&kp LCTRL  &kp Z   &kp X   &kp C         &kp V             &kp B        &kp N       &kp M      &kp COMMA     &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
+                           &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp DELETE  &kp ENTER  &kp CAPSLOCK
+            >;
+        };
+
+        utils {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
     };
