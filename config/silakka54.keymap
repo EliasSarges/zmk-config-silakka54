@@ -7,15 +7,15 @@
 
         default_layer {
             bindings = <
-&kp ESC    &kp N0  &kp N1  &kp N2        &kp N3            &kp N4       &kp N5      &kp N6     &kp N7        &kp N8          &kp N9    &kp DELETE
-&kp TAB    &kp Q   &kp W   &kp E         &kp R             &kp T        &kp Y       &kp U      &kp I         &kp O           &kp P     &kp LBKT
-&kp LSHFT  &kp A   &kp S   &kp D         &kp F             &kp G        &kp H       &kp J      &kp K         &kp L           &kp UP    &kp RBKT
-&kp LCTRL  &kp Z   &kp X   &kp C         &kp V             &kp B        &kp N       &kp M      &kp COMMA     &kp LEFT_ARROW  &kp DOWN  &kp RIGHT
-                           &kp LEFT_ALT  &kp LEFT_COMMAND  &kp SPACE    &kp DELETE  &kp ENTER  &kp CAPSLOCK
+&kp ESC    &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp NUMBER_5    &kp NUMBER_6   &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp NUMBER_0   &kp DELETE
+&kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y          &kp U         &kp I         &kp O         &kp P          &kp BACKSLASH
+&kp LSHFT  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H          &kp J         &kp K         &kp L         &kp SEMICOLON  &kp SINGLE_QUOTE
+&kp LCTRL  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N          &kp M         &kp COMMA     &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
+                                       &trans        &trans        &kp SPACE       &kp BACKSPACE  &kp ENTER     &trans
             >;
         };
 
-        utils {
+        L1 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
