@@ -1,4 +1,5 @@
 #include <behaviors.dtsi>
+#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
 / {
@@ -11,16 +12,26 @@
 &kp TAB    &kp Q         &kp W         &kp E         &kp R         &kp T           &kp Y          &kp U         &kp I         &kp O         &kp P          &kp BACKSLASH
 &kp LSHFT  &kp A         &kp S         &kp D         &kp F         &kp G           &kp H          &kp J         &kp K         &kp L         &kp SEMICOLON  &kp SINGLE_QUOTE
 &kp LCTRL  &kp Z         &kp X         &kp C         &kp V         &kp B           &kp N          &kp M         &kp COMMA     &kp PERIOD    &kp SLASH      &kp RIGHT_SHIFT
-                                       &trans        &trans        &kp SPACE       &kp BACKSPACE  &kp ENTER     &trans
+                                       &mo 1         &mo 2         &kp SPACE       &kp BACKSPACE  &kp ENTER     &trans
             >;
         };
 
         L1 {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&kp ESCAPE      &trans        &trans         &trans      &trans       &trans        &trans           &trans          &trans          &trans       &trans      &kp DEL
+&kp TAB         &trans        &trans         &trans      &trans       &trans        &kp PRINTSCREEN  &kp PAGE_DOWN   &kp UP_ARROW    &kp PAGE_UP  &trans      &trans
+&kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_META  &trans      &trans       &kp K_REDO    &kp HOME         &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT    &kp END     &bt BT_CLR_ALL
+&kp LCTRL       &kp K_UNDO    &kp K_CUT      &kp K_COPY  &kp K_PASTE  &trans        &trans           &trans          &trans          &trans       &bt BT_PRV  &bt BT_NXT
+                                             &trans      &trans       &trans        &trans           &trans          &trans
+            >;
+        };
+
+        L2 {
+            bindings = <
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans   &trans   &trans
                         &trans  &trans  &trans    &trans  &trans  &trans
             >;
         };
