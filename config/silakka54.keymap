@@ -28,21 +28,21 @@
 
         L2 {
             bindings = <
-&kp F1     &kp F2  &kp F3  &kp F4  &kp F5  &kp F6    &kp F7  &kp F8  &kp F9  &kp F10    &kp F11    &kp F12
-&kp GRAVE  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans
-&trans     &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans
-                           &mo 2   &trans  &trans    &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans
+&kp CAPSLOCK    &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans     &trans     &trans
+                                &mo 2   &trans  &trans    &trans  &trans  &trans
             >;
         };
 
         layer_3 {
             bindings = <
-&trans        &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans            &trans             &trans
-&kp CAPSLOCK  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
-&kp F1        &kp F2  &kp F3  &kp F4  &kp F5        &kp F6              &kp F7  &kp F8  &kp F9  &kp F10           &kp F11            &kp F12
-&trans        &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans            &trans             &trans
-                              &trans  &kp LEFT_ALT  &kp LEFT_COMMAND    &trans  &trans  &mo 3
+&kp F1          &kp F2  &kp F3  &kp F4  &kp F5        &kp F6              &kp F7  &kp F8  &kp F9  &kp F10           &kp F11            &kp F12
+&kp GRAVE       &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans            &trans             &trans
+&trans          &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans            &trans             &trans
+                                &trans  &kp LEFT_ALT  &kp LEFT_COMMAND    &trans  &trans  &mo 3
             >;
         };
 
