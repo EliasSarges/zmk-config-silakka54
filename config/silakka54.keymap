@@ -39,11 +39,11 @@
 
         L3 {
             bindings = <
-&kp F1            &kp F2  &kp F3  &kp F4        &kp F5        &kp F6              &kp F7     &kp F8  &kp F9  &kp F10  &kp F11  &kp F12
-&kp ESCAPE        &trans  &trans  &trans        &trans        &trans              &trans     &trans  &trans  &trans   &trans   &trans
-&kp TAB           &trans  &trans  &trans        &trans        &trans              &trans     &trans  &trans  &trans   &trans   &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &trans  &trans  &trans        &trans        &trans              &trans     &trans  &trans  &trans   &trans   &trans
-                                  &kp CAPSLOCK  &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE  &trans  &mo 3
+&kp F1            &kp F2  &kp F3  &kp F4        &kp F5        &kp F6              &kp F7     &kp F8          &kp F9          &kp F10          &kp F11  &kp F12
+&kp ESCAPE        &trans  &trans  &trans        &trans        &trans              &trans     &trans          &kp UP_ARROW    &trans           &trans   &trans
+&kp TAB           &trans  &trans  &trans        &trans        &trans              &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &kp RIGHT_SHIFT
+&kp LEFT_CONTROL  &trans  &trans  &trans        &trans        &trans              &trans     &trans          &trans          &trans           &trans   &trans
+                                  &kp CAPSLOCK  &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE  &trans          &mo 3
             >;
         };
 
