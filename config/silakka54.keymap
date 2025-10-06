@@ -29,11 +29,11 @@
 
         L2 {
             bindings = <
-&trans          &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &kp MINUS  &kp EQUAL  &trans
-&kp GRAVE       &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &kp LBKT   &kp RBKT   &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans     &trans     &trans
-&trans          &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans     &trans     &trans
-                                &mo 2   &kp LEFT_ALT  &kp LEFT_COMMAND    &trans  &trans  &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &kp MINUS  &kp EQUAL  &trans
+&kp GRAVE       &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &kp LBKT   &kp RBKT   &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &trans     &trans     &trans
+&kp LCTRL       &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &trans     &trans     &trans
+                                &mo 2   &trans  &trans    &kp LEFT_COMMAND  &kp LEFT_ALT  &trans
             >;
         };
 
