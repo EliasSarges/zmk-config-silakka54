@@ -29,31 +29,31 @@
 
         L3 {
             bindings = <
-&kp F1            &kp F2  &kp F3  &kp F4      &kp F5        &kp F6              &kp F7     &kp F8          &kp F9          &kp F10          &kp F11  &kp F12
-&kp TAB           &trans  &trans  &trans      &trans        &trans              &trans     &trans          &kp UP_ARROW    &trans           &trans   &trans
-&kp LEFT_SHIFT    &trans  &trans  &trans      &trans        &trans              &trans     &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans   &kp RIGHT_SHIFT
-&kp LEFT_CONTROL  &trans  &trans  &trans      &trans        &trans              &trans     &trans          &trans          &trans           &trans   &kp CAPSLOCK
-                                  &kp ESCAPE  &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE  &trans          &mo 2
+&kp F1            &kp F2  &kp F3  &kp F4      &kp F5        &kp F6              &kp F7     &kp F8     &kp F9  &kp F10  &kp F11  &kp F12
+&kp TAB           &trans  &trans  &trans      &trans        &trans              &trans     &trans     &trans  &trans   &trans   &trans
+&kp LEFT_SHIFT    &trans  &trans  &trans      &trans        &trans              &trans     &trans     &trans  &trans   &trans   &trans
+&kp LEFT_CONTROL  &trans  &trans  &trans      &trans        &trans              &trans     &trans     &trans  &trans   &trans   &trans
+                                  &kp ESCAPE  &kp LEFT_ALT  &kp LEFT_COMMAND    &kp SPACE  &kp ENTER  &mo 2
             >;
         };
 
         L2 {
             bindings = <
-&trans          &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &kp MINUS  &kp EQUAL  &trans
-&kp GRAVE       &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &kp LBKT   &kp RBKT   &trans
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &trans     &trans     &trans
-&kp LCTRL       &trans  &trans  &trans  &trans  &trans    &trans            &trans        &trans  &trans     &trans     &trans
-                                &mo 3   &trans  &trans    &kp LEFT_COMMAND  &kp LEFT_ALT  &trans
+&trans          &trans  &trans  &trans  &trans  &trans    &trans            &trans          &trans          &kp MINUS        &kp EQUAL  &trans
+&kp GRAVE       &trans  &trans  &trans  &trans  &trans    &trans            &trans          &kp UP_ARROW    &kp LBKT         &kp RBKT   &trans
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans    &trans            &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &trans     &trans
+&kp LCTRL       &trans  &trans  &trans  &trans  &trans    &trans            &trans          &trans          &trans           &trans     &trans
+                                &mo 3   &trans  &trans    &kp LEFT_COMMAND  &kp LEFT_ALT    &trans
             >;
         };
 
         L4 {
             bindings = <
-&trans     &kp N1  &kp N2  &kp N3  &kp N4        &kp N5              &kp N6         &kp N7  &kp N8  &kp N9  &kp N0  &trans
-&trans     &trans  &trans  &trans  &trans        &trans              &trans         &trans  &trans  &trans  &trans  &trans
-&trans     &trans  &trans  &trans  &trans        &trans              &trans         &trans  &trans  &trans  &trans  &trans
-&kp LCTRL  &trans  &trans  &trans  &trans        &trans              &trans         &trans  &trans  &trans  &trans  &mo 4
-                           &trans  &kp LEFT_ALT  &kp LEFT_COMMAND    &kp LG(SPACE)  &trans  &trans
+&trans     &kp N1  &kp N2  &kp N3  &kp N4        &kp N5              &kp N6  &kp N7  &kp N8  &kp N9  &kp N0  &trans
+&trans     &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&trans     &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans  &trans  &trans
+&kp LCTRL  &trans  &trans  &trans  &trans        &trans              &trans  &trans  &trans  &trans  &trans  &mo 4
+                           &trans  &kp LEFT_ALT  &kp LEFT_COMMAND    &trans  &trans  &trans
             >;
         };
     };
