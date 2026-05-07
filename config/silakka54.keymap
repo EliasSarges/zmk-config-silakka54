@@ -31,11 +31,11 @@
 
         L1 {
             bindings = <
-&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans          &trans          &trans           &trans    &trans       &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT  &kp C_VOL_DN   &kp C_VOLUME_UP
-&trans                &trans                &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans    &kp PAGE_UP  &kp HOME        &kp UP_ARROW      &kp END     &kp PAGE_DOWN  &bt BT_CLR_ALL
-&trans                &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &trans       &kp LEFT_ARROW  &kp DOWN_ARROW    &kp RIGHT   &trans         &bt BT_PRV
-&kp LEFT_COMMAND      &trans                &trans          &trans          &trans           &trans    &trans       &trans          &trans            &trans      &trans         &bt BT_NXT
-                                                            &trans          &mo 1            &trans    &mkp LCLK    &mkp RCLK       &mkp MCLK
+&kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &trans          &trans          &trans           &trans    &trans          &kp C_PREV      &kp C_PLAY_PAUSE  &kp C_NEXT       &kp C_VOL_DN   &kp C_VOLUME_UP
+&trans                &trans                &msc SCRL_DOWN  &mmv MOVE_UP    &msc SCRL_UP     &trans    &kp PAGE_UP     &kp HOME        &trans            &kp END          &kp PAGE_DOWN  &bt BT_CLR_ALL
+&trans                &trans                &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp UP_ARROW      &kp RIGHT_ARROW  &trans         &bt BT_PRV
+&kp LEFT_COMMAND      &trans                &trans          &trans          &trans           &trans    &trans          &trans          &trans            &trans           &trans         &bt BT_NXT
+                                                            &trans          &mo 1            &trans    &mkp LCLK       &mkp RCLK       &mkp MCLK
             >;
         };
 
