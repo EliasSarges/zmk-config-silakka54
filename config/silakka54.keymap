@@ -14,6 +14,16 @@
             bindings = <&kp ENTER>;
             key-positions = <31 33 32>;
         };
+
+        pv_desktop {
+            bindings = <&kp LG(LEFT_ARROW)>;
+            key-positions = <31 32>;
+        };
+
+        nt_desktop {
+            bindings = <&kp LG(RIGHT_ARROW)>;
+            key-positions = <33 34>;
+        };
     };
 
     keymap {
