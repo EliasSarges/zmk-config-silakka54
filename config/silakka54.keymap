@@ -16,12 +16,12 @@
         };
 
         pv_desktop {
-            bindings = <&kp LG(LEFT_ARROW)>;
+            bindings = <&kp LG(LC(LEFT_ARROW))>;
             key-positions = <31 32>;
         };
 
         nt_desktop {
-            bindings = <&kp LG(RIGHT_ARROW)>;
+            bindings = <&kp LG(LC(RIGHT_ARROW))>;
             key-positions = <33 34>;
         };
     };
