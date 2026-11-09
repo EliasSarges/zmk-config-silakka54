@@ -24,6 +24,11 @@
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
             key-positions = <33 36 49>;
         };
+
+        show_desktops {
+            bindings = <&kp LG(TAB)>;
+            key-positions = <36 49 32>;
+        };
     };
 
     keymap {
