@@ -17,17 +17,17 @@
 
         pv_desktop {
             bindings = <&kp LG(LC(LEFT_ARROW))>;
-            key-positions = <30 36 49>;
+            key-positions = <30 36 48>;
         };
 
         nt_desktop {
             bindings = <&kp LG(LC(RIGHT_ARROW))>;
-            key-positions = <33 36 49>;
+            key-positions = <33 36 48>;
         };
 
         show_desktops {
             bindings = <&kp LG(TAB)>;
-            key-positions = <36 49 32>;
+            key-positions = <36 32 48>;
         };
     };
 
